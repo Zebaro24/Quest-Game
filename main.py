@@ -1,4 +1,5 @@
 from telebot import TeleBot, types
+from os import getenv
 # import psycopg2
 
 from quests.QuestHacker import QuestHacker
@@ -15,7 +16,7 @@ from time import sleep
 
 
 # <Инициализация>
-bot = TeleBot(TOKEN)
+bot = TeleBot(getenv('TOKEN'))
 
 # conn = psycopg2.connect(database=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST, port=DB_PORT)
 # cursor = conn.cursor()
